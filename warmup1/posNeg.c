@@ -5,6 +5,19 @@
 #include <stdbool.h>
 
 bool posNeg(int a, int b, bool negative) {
+    if (negative) {
+        if (a < 0 && b < 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        if ((a < 0 && b >= 0) || (a >= 0 && b < 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
   // TODO: if (negative) return (a < 0 && b < 0);
   //       else return ((a < 0 && b >= 0) || (a >= 0 && b < 0));
   return false;
