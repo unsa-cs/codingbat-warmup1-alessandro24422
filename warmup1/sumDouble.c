@@ -5,6 +5,11 @@
 #include <stdio.h>
 
 int sumDouble(int a, int b) {
+    if (a == b) {
+        return 2 * (a + b);
+    } else {
+        return a + b;
+    }
   // TODO: return (a == b) ? 2 * (a + b) : (a + b);
   return 0;
 }
