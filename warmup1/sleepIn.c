@@ -7,6 +7,12 @@
 #include <stdbool.h>
 
 bool sleepIn(bool weekday, bool vacation) {
+    if (!weekday) {
+        return true;
+    }
+    if (vacation) {
+        return true;
+    }
   // TODO: implement the logic: return (!weekday || vacation);
   return false;
 }
