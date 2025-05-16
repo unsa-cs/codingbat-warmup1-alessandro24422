@@ -7,6 +7,9 @@
 #include <stdbool.h>
 
 bool parrotTrouble(bool talking, int hour) {
+    if (talking && (hour < 7 || hour > 20)) {
+        return true;
+    }
   // TODO: return (talking && (hour < 7 || hour > 20));
   return false;
 }
