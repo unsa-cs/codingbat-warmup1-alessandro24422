@@ -6,6 +6,12 @@
 #include <stdbool.h>
 
 bool monkeyTrouble(bool aSmile, bool bSmile) {
+    if (aSmile && bSmile) {
+        return true;
+    }
+    if (!aSmile && !bSmile) {
+        return true;
+    }
   // TODO: return (aSmile == bSmile);
   return false;
 }
