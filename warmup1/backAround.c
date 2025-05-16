@@ -6,6 +6,21 @@
 #include <stdlib.h>
 
 char* backAround(const char s[]) {
+      int len = 0;
+    while (s[len]) len++;
+
+    char last = s[len - 1];
+
+    char* result = malloc(len + 3);
+    if (!result) return NULL;
+
+    result[0] = last;
+    for (int i = 0; i < len; i++)
+        result[i + 1] = s[i];
+    result[len + 1] = last;
+    result[len + 2] = '\0';
+
+    return result;
   // TODO: implement logic adding last char front and back
   return (char*)s;
 }
